@@ -1,7 +1,7 @@
 ## RFs (Requisitos Funcionais)
 - [x] Deve ser possível se cadastrar
 - [x] Deve ser possível se autenticar 
-- [ ] Deve ser possível alterar sua senha
+- [x] Deve ser possível alterar sua senha
 - [ ] Deve ser possível obter o perfil de um usuário logado
 - [ ] Deve ser possível cadastrar os seus investimentos
 - [ ] Deve ser possível realizar uma assinatura de até (12 meses)
