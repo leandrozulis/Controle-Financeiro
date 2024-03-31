@@ -1,0 +1,11 @@
+version: '4.26.0'
+
+services:
+  controle_financeiro:
+    image: bitnami/postgresql
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRESQL_USERNAME=Y29udHJvbGU6ZmluYW5jZWlybw
+      - POSTGRESQL_PASSWORD=ZmluYW5jZWlybzpzZW5oYQ
+      - POSTGRESQL_DATABASE=controlefinanceiro
