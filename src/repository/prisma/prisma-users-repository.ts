@@ -4,6 +4,22 @@ import { prisma } from '@/lib/prisma'
 
 export class PrismaUsersRepository implements UsersRepository {
 
+	async findById(id: string) {
+		
+		const user = await prisma.user.findFirst({
+			where: {
+				id
+			}
+		})
+
+		if (!user) {
+			return null
+		}
+
+		return user
+
+	}
+
 	async patchPassword(email: string, password_hash: Prisma.UserUpdateInput) {
 	
 		const user = await prisma.user.update({

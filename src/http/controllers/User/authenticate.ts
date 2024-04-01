@@ -16,12 +16,18 @@ export async function authenticate(request: FastifyRequest, reply: FastifyReply)
 
 		const makeUser = MakeAuthenticateUser()
 
-		await makeUser.execute({
+		const { user } = await makeUser.execute({
 			email,
 			password,
 		})
+
+		const token = await reply.jwtSign({}, {
+			sign: {
+				sub: user.id
+			}
+		})
     
-		return reply.status(200).send({ message: 'Authenticate User' })
+		return reply.status(200).send({ message: 'Authenticate User', 'Token': token })
 
 	} catch (err) {
 		if (err instanceof ResourceNotFoundError) {
