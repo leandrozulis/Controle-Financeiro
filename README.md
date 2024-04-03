@@ -6,7 +6,7 @@
 - [x] Deve ser possível obter o perfil de um usuário logado
 - [x] Deve ser possível cadastrar os seus investimentos
 - [ ] Deve ser possível realizar uma assinatura de até (12 meses)
-- [ ] Deve ser possível realizar um filtro por cota
+- [x] Deve ser possível realizar um filtro por cota
 - [ ] Deve ser possível realizar um filtro por mês
 - [ ] Deve ser possível que o investidor confira o total de seus investimentos
 
