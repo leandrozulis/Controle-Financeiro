@@ -4,7 +4,7 @@ import { prisma } from '@/lib/prisma'
 
 export class PrismaInvestimentRepository implements InvestimentRepository {
 
-	async calculateTheTotal(id: string) {
+	async filterByCotas(id: string) {
 		
 		const investimento = await prisma.investiment.findMany({
 			where: {
@@ -16,11 +16,12 @@ export class PrismaInvestimentRepository implements InvestimentRepository {
 
 	}
 
-	async findCota(query: string) {
+	async findCota(query: string, id: string) {
 		
 		const investimento = await prisma.investiment.findMany({
 			where: {
-				sigla: query
+				sigla: query,
+				user_id: id
 			}
 		})
 

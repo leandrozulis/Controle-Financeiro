@@ -10,7 +10,7 @@ export class countCotasUseCase {
 
 	async execute( { userId }: countCotasUseCaseRequest ) {
     
-		const findCotas = await this.countCotas.calculateTheTotal(userId)
+		const findCotas = await this.countCotas.filterByCotas(userId)
 
 		const totalInvestedPerCota  = findCotas.map(cota => {
 			const totalPrice = parseFloat(cota.price.toString()) * parseInt(cota.amount)

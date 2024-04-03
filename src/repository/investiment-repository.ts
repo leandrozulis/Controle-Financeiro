@@ -2,6 +2,6 @@ import { Investiment, Prisma } from '@prisma/client'
 
 export interface InvestimentRepository {
   create(data: Prisma.InvestimentUncheckedCreateInput): Promise<Investiment>
-  findCota(query: string): Promise<Investiment[]>
-  calculateTheTotal(id: string): Promise<Investiment[]>
+  findCota(query: string, id: string): Promise<Investiment[]>
+  filterByCotas(id: string): Promise<Investiment[]>
 }

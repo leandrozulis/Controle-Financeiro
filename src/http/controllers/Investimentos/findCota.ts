@@ -16,7 +16,8 @@ export async function findCota(request: FastifyRequest, reply: FastifyReply) {
 		const makeInvestiment = MakeFindManyCotasInvestiment()
 
 		const cotas = await makeInvestiment.execute({
-			sigla
+			sigla,
+			userId: request.user.sub
 		})
     
 		return reply
