@@ -5,4 +5,5 @@ export interface UsersRepository {
   findByEmail(email: string): Promise<User | null>
   findById(id: string): Promise<User | null>
   patchPassword(email: string, password: Prisma.UserUpdateInput): Promise<User>
+  patchSignature(userId: string, signature: Prisma.UserUpdateInput): Promise<User>
 }

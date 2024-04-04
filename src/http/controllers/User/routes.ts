@@ -5,6 +5,7 @@ import { changePassword } from './changePassword'
 import { profile } from './profile'
 import { verifyJWT } from '@/http/middleware/fastifyVerify'
 import { refreshToken } from './refreshToken'
+import { signature } from './signature'
 
 export async function UserRoute(app: FastifyInstance) {
 
@@ -16,5 +17,6 @@ export async function UserRoute(app: FastifyInstance) {
 	app.get('/profile', {onRequest: [verifyJWT]}, profile)
 	
 	app.patch('/password', changePassword)
+	app.patch('/signature', {onRequest: [verifyJWT]}, signature)
 
 }

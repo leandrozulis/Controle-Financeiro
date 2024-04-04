@@ -4,6 +4,19 @@ import { prisma } from '@/lib/prisma'
 
 export class PrismaUsersRepository implements UsersRepository {
 
+	async patchSignature(userId: string, signature: Prisma.UserUpdateInput) {
+
+		const user = await prisma.user.update({
+			where: {
+				id: userId
+			},
+			data: signature
+		})
+
+		return user
+		
+	}
+
 	async findById(id: string) {
 		
 		const user = await prisma.user.findFirst({
