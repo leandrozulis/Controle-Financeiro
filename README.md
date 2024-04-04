@@ -8,7 +8,7 @@
 - [x] Deve ser possível o investidor filtrar todos os seus investimentos
 - [ ] Deve ser possível realizar uma assinatura de até (12 meses)
 - [x] Deve ser possível realizar um filtro por cota
-- [ ] Deve ser possível realizar um filtro por mês
+- [x] Deve ser possível realizar um filtro por mês
 - [x] Deve ser possível que o investidor confira o total de seus investimentos
 
 ## RNs (Regras de negócio)
