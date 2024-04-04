@@ -18,7 +18,7 @@ model User {
   name          String
   email         String        @unique
   password_hash String
-  created_at    DateTime      @default(now())
+  created_at    DateTime      @default(dbgenerated("timezone('UTC'::text, now()) - interval '3 hours'"))
   signature     Boolean?      @default(false)
   Investiment   Investiment[]
 
@@ -30,7 +30,7 @@ model Investiment {
   sigla      String
   amount     String
   price      Decimal
-  created_at DateTime @default(now())
+  created_at DateTime @default(dbgenerated("timezone('UTC'::text, now()) - interval '3 hours'"))
 
   user    User   @relation(fields: [user_id], references: [id])
   user_id String

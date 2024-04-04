@@ -3,6 +3,22 @@ import { InvestimentRepository } from '../investiment-repository'
 import { prisma } from '@/lib/prisma'
 
 export class PrismaInvestimentRepository implements InvestimentRepository {
+	
+	async filterByDate(id: string, dateIni: string, dateFim: string) {
+		
+		const investimento = await prisma.investiment.findMany({
+			where: {
+				user_id: id,
+				created_at: {
+					gte: new Date(dateIni + 'T00:00:00'),
+					lte: new Date(dateFim + 'T23:59:59')
+				}
+			}
+		})
+
+		return investimento
+
+	}
 
 	async filterByCotas(id: string) {
 		
