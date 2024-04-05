@@ -5,6 +5,7 @@ import { findCota } from './findCota'
 import { countCotas } from './countCotas'
 import { filterByCotas } from './filterAllByCotas'
 import { filterByDate } from './filterByDate'
+import { deleteCota } from './deleteInvestiment'
 
 export async function InvestimentRoute(app: FastifyInstance) {
 
@@ -16,5 +17,7 @@ export async function InvestimentRoute(app: FastifyInstance) {
 	app.get('/count', countCotas)
 	app.get('/cotas', filterByCotas)
 	app.get('/filter', filterByDate)
+
+	app.delete('/delete/:id', deleteCota)
 
 }

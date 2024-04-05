@@ -5,6 +5,7 @@
 - [x] Deve ser possível alterar sua senha
 - [x] Deve ser possível obter o perfil de um usuário logado
 - [x] Deve ser possível cadastrar os seus investimentos
+- [x] Deve ser possível excluir um registro de investimento
 - [x] Deve ser possível o investidor filtrar todos os seus investimentos
 - [x] Deve ser possível realizar uma assinatura vitalicia
 - [x] Deve ser possível realizar um filtro por cota

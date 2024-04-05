@@ -3,6 +3,18 @@ import { InvestimentRepository } from '../investiment-repository'
 import { prisma } from '@/lib/prisma'
 
 export class PrismaInvestimentRepository implements InvestimentRepository {
+	async deleteCota(id: string, userId: string) {
+		
+		const investimento = await prisma.investiment.delete({
+			where: {
+				id,
+				user_id: userId
+			}
+		})
+
+		return investimento
+
+	}
 	
 	async filterByDate(id: string, dateIni: string, dateFim: string) {
 		

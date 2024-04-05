@@ -5,4 +5,5 @@ export interface InvestimentRepository {
   findCota(query: string, id: string): Promise<Investiment[]>
   filterByCotas(id: string): Promise<Investiment[]>
   filterByDate(id: string, dateIni: string, dateFim: string): Promise<Investiment[]>
+  deleteCota(id: string, userId: string): Promise<Investiment>
 }
