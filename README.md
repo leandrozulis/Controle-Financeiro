@@ -2,6 +2,23 @@
 <html lang="pt-br">
 <head></head>
 <body>
+
+  <h1> Projeto de Controle Financeiro </h1>
+
+  <div>
+    <h2> Para dar o Start no Projeto certificasse dê: </h2>
+    <p>
+     1 - Rodar o "NPM INSTALL" (para instalar todas as dependências) <br>
+     2 - Clonar o .env.example para .env e configurar as variáveis: JWT_SECRET e DATABASE_URL <br>
+     3 - Para configurar o DATABASE_URL é preciso pegar os dados do arquivo docker-compose.yml e informar em cada campo <br>
+     4 - Com o Docker instalado na máquina utilize do comando: "docker compose up -d" <br>
+     5 - Rode o comando "npx prisma migrate reset" e responda como "Y" <br>
+     6 - Para o servidor funcionar utilize do comando npm run dev <br>
+     7 - Para visualizar os dados da tabela utilize do comando "npx prisma studio" <br>
+    </p>
+  </div>
+
+
   <div>
     <h2>Utilizando as Rotas da API</h2>
     <h3>Rotas do Usuário</h3>
